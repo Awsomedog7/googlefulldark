@@ -1,0 +1,24 @@
+{
+  "manifest_version": 2,
+  "name": "Google Full Dark",
+  "version": "1.0",
+  "permissions": ["https://*.google.com/*", "activeTab"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.google.com/"],
+      "css": ["home.css"],
+      "run_at": "document_end"
+    },
+    {
+      "matches": ["https://www.google.com/webhp*"],
+      "css": ["home.css"],
+      "run_at": "document_end"
+    },
+    {
+      "matches": ["https://www.google.com/search?*"],
+      "css": ["search.css"],
+      "js": ["script.js"],
+      "run_at": "document_end"
+    }
+  ]
+}
